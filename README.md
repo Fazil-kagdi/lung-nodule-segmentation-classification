@@ -37,7 +37,7 @@ LIDC-IDRI-Preprocessing-master/
 
 or just replace the entire data folder in LIDC-IDRI-Preprocessing-master with this folder you can download [here](https://drive.google.com/drive/folders/196VKBCb8DlEdzSwZHE8Mz7gHAsahyJGA?usp=sharing)
 
-### 📓 Running the Pipeline
+## 📓 Step 1: Running the Pipeline
 
 After installing requirements and running the preprocessing script, open the main Jupyter notebook to run the complete pipeline:
 
@@ -77,5 +77,12 @@ The notebook includes:
 - Source: [LIDC-IDRI Dataset](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)
 - We used a **subset of 150 patients** for training and validation.
 - Preprocessing handled using [`pylidc`](https://github.com/jaeho3690/LIDC-IDRI-Preprocessing).
+
+## 📚 References
+
+- MONAI: Medical Open Network for AI - https://monai.io/
+- Jaeho Lee. [LIDC-IDRI-Preprocessing](https://github.com/jaeho3690/LIDC-IDRI-Preprocessing). GitHub repository.
+- Matthew Hancock. [pylidc](https://github.com/notmatthancock/pylidc). GitHub repository.
+- The Cancer Imaging Archive. [LIDC-IDRI](https://nbia.cancerimagingarchive.net/nbia-search/?CollectionCriteria=LIDC-IDRI). National Biomedical Imaging Archive.
 
 
