@@ -6,6 +6,13 @@ Deep learning pipeline for lung nodule detection and classification using LIDC-I
 - **Segmentation**: 2D U-Net trained on CT slices with Dice + BCE loss.
 - **Classification**: ResNet18 fine-tuned on extracted nodule patches.
 
+## 📦 Requirements
+
+To run this project, make sure you have the following packages installed:
+```bash
+pip install -r requirements.txt
+```
+
 ## 🧩 Step 0: Preprocess LIDC-IDRI to Extract 2D Slices
 
 Before training or running any models, you **must extract 2D image slices and segmentation masks** from the original LIDC-IDRI dataset.
@@ -30,6 +37,36 @@ LIDC-IDRI-Preprocessing-master/
 
 or just replace the entire data folder in LIDC-IDRI-Preprocessing-master with this folder you can download [here](https://drive.google.com/drive/folders/196VKBCb8DlEdzSwZHE8Mz7gHAsahyJGA?usp=sharing)
 
+### 📓 Running the Pipeline
+
+After installing requirements and running the preprocessing script, open the main Jupyter notebook to run the complete pipeline:
+
+The notebook includes:
+
+#### 🔹 Segmentation Model Training (U-Net)
+- Trains on 2D slices from preprocessed CT scans.
+- Uses **Dice + BCE** loss with a positive pixel weighting strategy.
+- Saves the best model as `best_model.pth`.
+
+#### 🔹 Patch Extraction
+- Extracts **64×64 patches** around nodules from the images using bounding boxes.
+- Patches are saved under:
+  - `patches/benign/`
+  - `patches/malignant/`
+
+#### 🔹 Classification Model Training (ResNet18)
+- Classifies each patch as **benign** or **malignant**.
+- Best model saved as `best_classifier.pth`.
+
+#### 🔹 Joint Visualization
+- Randomly picks a **nodule slice and patch**.
+- Displays:
+  - Original CT image  
+  - Ground truth segmentation  
+  - U-Net prediction  
+  - Classification result vs. ground truth
+
+
 ## 📊 Results
 
 - **Segmentation Dice Score**: ~0.75 (on validation set of 30 patients)
@@ -41,11 +78,4 @@ or just replace the entire data folder in LIDC-IDRI-Preprocessing-master with th
 - We used a **subset of 150 patients** for training and validation.
 - Preprocessing handled using [`pylidc`](https://github.com/jaeho3690/LIDC-IDRI-Preprocessing).
 
-## ⚙️ Requirements
 
-- Python ≥ 3.8
-- PyTorch
-- MONAI
-- torchvision
-- pylidc
-- numpy, pandas, matplotlib, scikit-image
