@@ -67,9 +67,9 @@ The notebook includes:
   - Classification result vs. ground truth
 
 ## 🏋️ Model Weights
- - You can download the weights for the segmentation model [here](https://drive.google.com/file/d/196mID1SP9VXOjTiSONt3Oh_Ek0Xmg-in/view?usp=sharing)
+ - You can download the weights for the trained segmentation model [here](https://drive.google.com/file/d/196mID1SP9VXOjTiSONt3Oh_Ek0Xmg-in/view?usp=sharing)
   
- - You can download the weights for the classifier [here](https://drive.google.com/file/d/1hYrXjUZSZKT-t5ucD89ESvbKHI3_kPzN/view?usp=sharing)
+ - You can download the weights for the trained classifier [here](https://drive.google.com/file/d/1hYrXjUZSZKT-t5ucD89ESvbKHI3_kPzN/view?usp=sharing)
 
 ## 📊 Results
 
