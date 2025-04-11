@@ -75,6 +75,7 @@ The notebook includes:
 
 - **Segmentation Dice Score**: ~0.75 (on validation set of 30 patients)
 - **Classification Accuracy**: ~85% (benign vs malignant)
+- Sample output:
   ![Demo Screenshot](output.png)
 
 ## 🗂️ Dataset
